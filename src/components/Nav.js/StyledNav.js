@@ -17,18 +17,6 @@ export const StyledNav = styled.header`
       font-size: ${({ theme }) => theme.fontSize.xl};
     }
   }
-  .nav-desktop {
-    @media (max-width: ${({ theme }) => theme.break.maxMobile}) {
-      display: none;
-    }
-  }
-  .nav-mobile {
-    transition: all 0.5s ease-out;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
   .nav-links {
     display: flex;
     text-transform: uppercase;
@@ -40,6 +28,28 @@ export const StyledNav = styled.header`
       font-size: ${({ theme }) => theme.fontSize.m};
     }
   }
+`;
+
+export const StyledNavDesktop = styled.nav`
+  @media (max-width: ${({ theme }) => theme.break.maxMobile}) {
+    display: none;
+  }
+  .nav-desktop-links {
+    gap: 33px;
+    & li {
+      @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
+        font-size: 18px;
+      }
+    }
+  }
+`;
+
+export const StyledNavMobile = styled.nav`
+  transition: all 0.5s ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   .nav-mobile-links {
     flex-direction: column;
     align-items: center;
@@ -50,23 +60,6 @@ export const StyledNav = styled.header`
     background-color: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.black};
   }
-
-  .nav-desktop-links {
-    gap: 33px;
-    & li {
-      @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .hamburger {
-    cursor: pointer;
-    font-size: 34px;
-    @media (min-width: ${({ theme }) => theme.break.maxMobile}) {
-      display: none;
-    }
-  }
   .close {
     position: absolute;
     right: 15px;
@@ -74,5 +67,13 @@ export const StyledNav = styled.header`
     font-size: 18px;
     cursor: pointer;
     color: ${({ theme }) => theme.color.black};
+  }
+`;
+
+export const StyledHamburgerIcon = styled.div`
+  cursor: pointer;
+  font-size: 34px;
+  @media (min-width: ${({ theme }) => theme.break.maxMobile}) {
+    display: none;
   }
 `;

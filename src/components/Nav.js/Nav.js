@@ -1,4 +1,4 @@
-import { StyledNav } from "./StyledNav";
+import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile } from "./StyledNav";
 
 function Nav() {
   const handleToogleNav = (e) => {
@@ -13,7 +13,7 @@ function Nav() {
   return (
     <StyledNav>
       <h1 className="title">THE PLANETS</h1>
-      <nav className="nav-desktop">
+      <StyledNavDesktop className="nav-desktop">
         <ul className="nav-desktop-links nav-links">
           <li>Mercury</li>
           <li>Venus</li>
@@ -24,8 +24,8 @@ function Nav() {
           <li>Uranus</li>
           <li>Neptune</li>
         </ul>
-      </nav>
-      <nav className="nav-mobile">
+      </StyledNavDesktop>
+      <StyledNavMobile className="nav-mobile">
         <ul className="nav-mobile-links nav-links">
           <li>Mercury</li>
           <li>Venus</li>
@@ -39,10 +39,10 @@ function Nav() {
         <div className="close" onClick={handleToogleNav}>
           <i className="fa-solid fa-xmark close"></i>
         </div>
-      </nav>
-      <div className="hamburger" onClick={handleToogleNav}>
+      </StyledNavMobile>
+      <StyledHamburgerIcon className="hamburger" onClick={handleToogleNav}>
         <i className="fa-solid fa-bars open"></i>
-      </div>
+      </StyledHamburgerIcon>
     </StyledNav>
   );
 }
