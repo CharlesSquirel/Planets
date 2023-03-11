@@ -47,8 +47,8 @@ export const StyledPlanetText = styled.article`
     font-family: "Antonio", sans-serif;
     line-height: 104px;
     text-transform: uppercase;
-    font-size: ${({ theme }) => theme.fontSize.xxl};
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-size: var(--xxl);
+    font-weight: var(--regular);
     @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
       font-size: 48px;
       line-height: 62px;
@@ -57,7 +57,7 @@ export const StyledPlanetText = styled.article`
   .planet-desc,
   .source-text {
     line-height: 25px;
-    font-size: ${({ theme }) => theme.fontSize.lg};
+    font-size: var(--lg);
   }
   .planet-desc {
     padding-right: 80px;
@@ -74,7 +74,7 @@ export const StyledPlanetWiki = styled.div`
   opacity: 0.5;
   .wiki-text {
     text-decoration: underline;
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    font-weight: var(--bold);
   }
   .source-icon {
     width: 12px;

@@ -10,11 +10,11 @@ export const StyledButton = styled.button`
   line-height: 25px;
   letter-spacing: 2.57143px;
   text-transform: uppercase;
-  border: 1px solid ${({ theme }) => theme.color.darkGray};
-  color: ${({ theme }) => theme.color.white};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  font-size: ${({ theme }) => theme.fontSize.m};
-  background-color: ${(props) => (props.isActive ? props.theme.color.lightBlue : "transparent")};
+  border: 1px solid var(--darkGray);
+  color: var(--white);
+  font-weight: var(--bold);
+  font-size: var(--m);
+  background-color: ${(props) => (props.isActive ? `var(--lightBlue)` : "transparent")};
   .btn-number {
     opacity: 0.5;
   }

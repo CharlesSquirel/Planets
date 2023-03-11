@@ -7,14 +7,14 @@ export const StyledNav = styled.header`
   position: relative;
   height: 85px;
   padding: 22px 40px 27px 32px;
-  border-bottom: 1px solid ${({ theme }) => theme.color.darkGray};
+  border-bottom: 1px solid var(--darkGray);
   .title {
     font-family: "Antonio", sans-serif;
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -1.05px;
     @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
-      font-size: ${({ theme }) => theme.fontSize.xl};
+      font-size: var(--xl);
     }
   }
   .nav-links {
@@ -24,8 +24,8 @@ export const StyledNav = styled.header`
       line-height: 25px;
       letter-spacing: 1px;
       opacity: 0.75;
-      font-weight: ${({ theme }) => theme.fontWeight.bold};
-      font-size: ${({ theme }) => theme.fontSize.m};
+      font-weight: var(--bold);
+      font-size: var(--m);
     }
   }
 `;
@@ -57,8 +57,8 @@ export const StyledNavMobile = styled.nav`
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: ${({ theme }) => theme.color.white};
-    color: ${({ theme }) => theme.color.black};
+    background-color: var(--white);
+    color: var(--black);
   }
   .close {
     position: absolute;
@@ -66,7 +66,7 @@ export const StyledNavMobile = styled.nav`
     top: 6px;
     font-size: 18px;
     cursor: pointer;
-    color: ${({ theme }) => theme.color.black};
+    color: var(--black);
   }
 `;
 
