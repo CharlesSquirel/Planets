@@ -9,18 +9,27 @@ export const StyledOverview = styled.main`
     flex-direction: column;
     gap: 80px;
     padding: 146px 40px 36px 39px;
+  }
+  @media (min-width: 1500px) {
+    justify-content: center;
+    gap: 300px;
+    padding: 146px 0 36px 0;
   } ;
 `;
 
 // PLANET IMG
 export const StyledPlanetImg = styled.div`
   align-self: center;
-  width: 290px;
-  height: 290px;
-  @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
+  width: 350px;
+  height: 350px;
+  /* @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
     width: 184px;
     height: 184px;
-  } ;
+  }
+  @media (min-width: 1500px) {
+    width: 470px;
+    height: 470px;
+  } ; */
 `;
 
 // PLANET TEXT

@@ -1,6 +1,6 @@
 export const theme = {
   break: {
-    maxTablet: "1145px",
+    maxTablet: "1213px",
     minDesktop: "1024px",
     maxMobile: "800px",
   },

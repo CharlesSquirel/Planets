@@ -31,6 +31,7 @@ export const StyledNav = styled.header`
 `;
 
 export const StyledNavDesktop = styled.nav`
+  padding-top: 6px;
   @media (max-width: ${({ theme }) => theme.break.maxMobile}) {
     display: none;
   }
