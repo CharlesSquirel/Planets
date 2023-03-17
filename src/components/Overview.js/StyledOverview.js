@@ -3,33 +3,18 @@ import styled from "styled-components";
 // MAIN CONTAINER
 export const StyledOverview = styled.main`
   display: flex;
-  justify-content: space-between;
-  padding: 126px 165px 0 335px;
+  flex-direction: column;
+  padding-bottom: 56px;
   @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
     flex-direction: column;
     gap: 80px;
     padding: 146px 40px 36px 39px;
   }
-  @media (min-width: 1500px) {
-    justify-content: center;
-    gap: 300px;
-    padding: 146px 0 36px 0;
-  } ;
 `;
 
 // PLANET IMG
 export const StyledPlanetImg = styled.div`
   align-self: center;
-  width: 350px;
-  height: 350px;
-  /* @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
-    width: 184px;
-    height: 184px;
-  }
-  @media (min-width: 1500px) {
-    width: 470px;
-    height: 470px;
-  } ; */
 `;
 
 // PLANET TEXT
@@ -99,4 +84,15 @@ export const StyledButtonBox = styled.div`
   @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
     align-self: center;
   }
+`;
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 85px 165px 87px 189px;
+  @media (min-width: 1500px) {
+    justify-content: center;
+    gap: 300px;
+    padding: 85px 0 87px 0;
+  } ;
 `;

@@ -48,7 +48,7 @@ export const StyledNavDesktop = styled.nav`
 export const StyledNavMobile = styled.nav`
   transition: all 0.5s ease-out;
   position: absolute;
-  left: 0;
+  left: -3000px;
   top: 0;
   width: 100%;
   .nav-mobile-links {
