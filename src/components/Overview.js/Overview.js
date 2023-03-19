@@ -4,7 +4,7 @@ import { FlexWrapper, StyledButtonBox, StyledOverview, StyledPlanetImg, StyledPl
 import source from "../../assets/icon-source.svg";
 import DataBoxes from "./DataBoxes";
 
-const Overview = ({ planet, img, size }) => {
+const Overview = ({ planet, img, size, planetColor }) => {
   return (
     <StyledOverview>
       <FlexWrapper>
@@ -26,7 +26,7 @@ const Overview = ({ planet, img, size }) => {
             </StyledPlanetWiki>
           </div>
           <StyledButtonBox>
-            <Button number="01" text="overview" isActive={true} />
+            <Button number="01" text="overview" isActive={true} planetColor={planetColor} />
             <Button number="02" text="internal structure" />
             <Button number="03" text="surface geology" />
           </StyledButtonBox>
