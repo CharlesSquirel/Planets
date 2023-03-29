@@ -2,40 +2,53 @@ import React from "react";
 import Button from "../Overview.js/Button";
 import DataBoxes from "../Overview.js/DataBoxes";
 import source from "../../assets/icon-source.svg";
+import {
+  StyledWrapperFlex,
+  StyledButtonWrapper,
+  StyledOverview,
+  StyledImg,
+  StyledPlanetArticle,
+  StyledWrapperWiki,
+  StyledWrapperPlanet,
+  StyledPlanetTitle,
+  StyledPlanetDescription,
+  StyledWikiText,
+  StyledSourceIcon,
+  StyledSecondaryImg,
+} from "../Overview.js/StyledOverview";
 
-import { FlexWrapper, StyledButtonBox, StyledOverview, StyledPlanetImg, StyledPlanetText, StyledPlanetWiki } from "../Overview.js/StyledOverview";
-
-const Surface = ({ planet, img, size, imgSecondary, position }) => {
+const Surface = ({ planet, img, size, imgSecondary, position, planetColor }) => {
+  const planetToNavigate = planet.name.toLowerCase();
   return (
     <StyledOverview>
-      <FlexWrapper>
-        <StyledPlanetImg position={position}>
+      <StyledWrapperFlex>
+        <StyledImg>
           <img src={img} alt={planet.name} width={size} height={size} />
-          <div className="img-secondary">
+          <StyledSecondaryImg position={position}>
             <img src={imgSecondary} alt="" />
-          </div>
-        </StyledPlanetImg>
-        <StyledPlanetText>
-          <div className="planet-text-box">
-            <h2 className="planet-title">{planet.name}</h2>
-            <p className="planet-desc">{planet.overview.content}</p>
-            <StyledPlanetWiki>
+          </StyledSecondaryImg>
+        </StyledImg>
+        <StyledPlanetArticle>
+          <StyledWrapperPlanet>
+            <StyledPlanetTitle>{planet.name}</StyledPlanetTitle>
+            <StyledPlanetDescription>{planet.overview.content}</StyledPlanetDescription>
+            <StyledWrapperWiki>
               Source:
-              <span className="wiki-text">
+              <StyledWikiText>
                 <a href={planet.overview.source}>Wikipedia</a>
-              </span>
+              </StyledWikiText>
               <span>
-                <img className="source-icon" src={source} alt="" />
+                <StyledSourceIcon src={source} alt="" />
               </span>
-            </StyledPlanetWiki>
-          </div>
-          <StyledButtonBox>
-            <Button number="01" text="overview" />
-            <Button number="02" text="internal structure" />
-            <Button number="03" text="surface geology" isActive={true} />
-          </StyledButtonBox>
-        </StyledPlanetText>
-      </FlexWrapper>
+            </StyledWrapperWiki>
+          </StyledWrapperPlanet>
+          <StyledButtonWrapper>
+            <Button number="01" text="overview" navigate={planetToNavigate !== "mercury" ? `/${planetToNavigate}/overview` : `/`} />
+            <Button number="02" text="internal structure" navigate={`/${planetToNavigate}/structure`} />
+            <Button number="03" text="surface geology" isActive={true} planetColor={planetColor} navigate={`/${planetToNavigate}/surface`} />
+          </StyledButtonWrapper>
+        </StyledPlanetArticle>
+      </StyledWrapperFlex>
       <DataBoxes planet={planet} />
     </StyledOverview>
   );

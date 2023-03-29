@@ -8,6 +8,7 @@ export const StyledNav = styled.header`
   height: 85px;
   padding: 22px 40px 27px 32px;
   border-bottom: 1px solid var(--darkGray);
+
   .title {
     font-family: "Antonio", sans-serif;
     font-size: 28px;
@@ -20,12 +21,14 @@ export const StyledNav = styled.header`
   .nav-links {
     display: flex;
     text-transform: uppercase;
+
     & li {
       line-height: 25px;
       letter-spacing: 1px;
-      opacity: 0.75;
+      color: var(--lightGray);
       font-weight: var(--bold);
       font-size: var(--m);
+      position: relative;
     }
   }
 `;
@@ -34,6 +37,16 @@ export const StyledNavDesktop = styled.nav`
   padding-top: 6px;
   @media (max-width: ${({ theme }) => theme.break.maxMobile}) {
     display: none;
+  }
+  .active {
+    color: var(--white);
+    &::after {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 4px;
+      background-color: red;
+    }
   }
   .nav-desktop-links {
     gap: 33px;

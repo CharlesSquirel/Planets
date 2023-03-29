@@ -1,37 +1,50 @@
 import React from "react";
 import Button from "./Button";
-import { FlexWrapper, StyledButtonBox, StyledOverview, StyledPlanetImg, StyledPlanetText, StyledPlanetWiki } from "./StyledOverview";
+import {
+  StyledWrapperFlex,
+  StyledButtonWrapper,
+  StyledOverview,
+  StyledImg,
+  StyledWrapperWiki,
+  StyledWrapperPlanet,
+  StyledWikiText,
+  StyledSourceIcon,
+  StyledPlanetArticle,
+  StyledPlanetTitle,
+  StyledPlanetDescription,
+} from "./StyledOverview";
 import source from "../../assets/icon-source.svg";
 import DataBoxes from "./DataBoxes";
 
 const Overview = ({ planet, img, size, planetColor }) => {
+  const planetToNavigate = planet.name.toLowerCase();
   return (
     <StyledOverview>
-      <FlexWrapper>
-        <StyledPlanetImg>
+      <StyledWrapperFlex>
+        <StyledImg>
           <img src={img} alt={planet.name} width={size} height={size} />
-        </StyledPlanetImg>
-        <StyledPlanetText>
-          <div className="planet-text-box">
-            <h2 className="planet-title">{planet.name}</h2>
-            <p className="planet-desc">{planet.overview.content}</p>
-            <StyledPlanetWiki>
+        </StyledImg>
+        <StyledPlanetArticle>
+          <StyledWrapperPlanet>
+            <StyledPlanetTitle>{planet.name}</StyledPlanetTitle>
+            <StyledPlanetDescription>{planet.overview.content}</StyledPlanetDescription>
+            <StyledWrapperWiki>
               Source:
-              <span className="wiki-text">
+              <StyledWikiText>
                 <a href={planet.overview.source}>Wikipedia</a>
-              </span>
+              </StyledWikiText>
               <span>
-                <img className="source-icon" src={source} alt="" />
+                <StyledSourceIcon className="source-icon" src={source} alt="" />
               </span>
-            </StyledPlanetWiki>
-          </div>
-          <StyledButtonBox>
-            <Button number="01" text="overview" isActive={true} planetColor={planetColor} />
-            <Button number="02" text="internal structure" />
-            <Button number="03" text="surface geology" />
-          </StyledButtonBox>
-        </StyledPlanetText>
-      </FlexWrapper>
+            </StyledWrapperWiki>
+          </StyledWrapperPlanet>
+          <StyledButtonWrapper>
+            <Button number="01" text="overview" isActive={true} planetColor={planetColor} navigate={planetToNavigate !== "mercury" ? `/${planetToNavigate}/overview` : `/`} />
+            <Button number="02" text="internal structure" navigate={`/${planetToNavigate}/structure`} />
+            <Button number="03" text="surface geology" navigate={`/${planetToNavigate}/surface`} />
+          </StyledButtonWrapper>
+        </StyledPlanetArticle>
+      </StyledWrapperFlex>
       <DataBoxes planet={planet} />
     </StyledOverview>
   );

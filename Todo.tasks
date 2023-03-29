@@ -1,5 +1,14 @@
 ☐ rwd dla overview @high 
 ☐ poprawienie layoutu saturna @low 
-☐ dodanie transition tam gdzie trzeba
-
-
+☐ dodanie transition tam gdzie trzeba @low 
+☐ poprawić mobile menu zgodnie z figma @high 
+☐ poprawić, żeby nie skakało przy zmianie widoków, css @low 
+☐ dodać PageNotFound czy coś takiego @low 
+☐ zmienić wszystkie style na osobne komponenty styled @low
+✔ rozwalił się surface position secondary img @high @done (22.03.2023, 20:20:12)
+✔ buttony w innych podstronach się nie swiecą na dobry kolor po refactoringu styli @high @done (22.03.2023, 20:20:16)
+✔ zmienić nazwy dla path routerze na /mercury/overview itp. @low @done (29.03.2023, 21:51:56)
+✔ dodac nav do buttonów @low @done (29.03.2023, 23:02:59)
+☐ zmienic teksty przy renderowaniu nowych podstron/ children? @high 
+☐ navlink wskaznik na podstronach @high
+✔ mercury overview podstrona nie dziala @low @done (29.03.2023, 23:09:14)
