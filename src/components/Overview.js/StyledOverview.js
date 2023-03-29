@@ -15,6 +15,30 @@ export const StyledOverview = styled.main`
 // PLANET IMG
 export const StyledPlanetImg = styled.div`
   align-self: center;
+  position: relative;
+  .img-secondary {
+    position: absolute;
+    top: ${({ position }) =>
+      (position === "Mercury" && "230px") ||
+      (position === "Venus" && "279px") ||
+      (position === "Earth" && "313px") ||
+      (position === "Mars" && "251px") ||
+      (position === "Jupiter" && "377px") ||
+      (position === "Saturn" && "391px") ||
+      (position === "Uranus" && "333px") ||
+      (position === "Neptune" && "303px")};
+    left: ${({ position }) =>
+      (position === "Mercury" && "64px") ||
+      (position === "Venus" && "118px") ||
+      (position === "Earth" && "145px") ||
+      (position === "Mars" && "86px") ||
+      (position === "Jupiter" && "209px") ||
+      (position === "Saturn" && "252px") ||
+      (position === "Uranus" && "148px") ||
+      (position === "Neptune" && "143px")};
+    width: 163px;
+    height: 199px;
+  }
 `;
 
 // PLANET TEXT

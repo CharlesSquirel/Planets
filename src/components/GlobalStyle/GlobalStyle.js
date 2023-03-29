@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     --orange: #CD5120;
     --darkBlue: #2d68f0;
     --lightBlue: #419EBB;
+    --btn-hover: #1c1c31; 
     --xxl: 80px;
     --xl: 40px;
     --lg: 14px;
@@ -49,6 +50,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 img {
@@ -59,7 +61,7 @@ img {
 
 button {
     font-family: inherit;
-    
+    cursor: pointer;
 }
 
 ul {
