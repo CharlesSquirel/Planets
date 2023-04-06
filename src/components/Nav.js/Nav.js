@@ -1,51 +1,52 @@
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
-import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile } from "./StyledNav";
+import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile, Title, StyledLink, StyledMobileLinks, StyledDesktopLinks } from "./StyledNav";
+import { useRef } from "react";
 
 function Nav() {
+  const navMobile = useRef();
   const handleToogleNav = (e) => {
-    const navMobile = document.querySelector(".nav-mobile");
     if (e.target.classList.value.includes("close")) {
-      navMobile.style.left = "-3000px";
+      navMobile.current.style.left = "-3000px";
     }
     if (e.target.classList.value.includes("open")) {
-      navMobile.style.left = "0";
+      navMobile.current.style.left = "0";
     }
   };
   return (
     <>
       <StyledNav>
-        <h1 className="title">THE PLANETS</h1>
-        <StyledNavDesktop className="nav-desktop">
-          <ul className="nav-desktop-links nav-links">
-            <li>
+        <Title>THE PLANETS</Title>
+        <StyledNavDesktop>
+          <StyledDesktopLinks>
+            <StyledLink>
               <NavLink to="/">Mercury</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/venus/overview">Venus</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/earth/overview">Earth</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/mars/overview">Mars</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/jupiter/overview">Jupiter</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/saturn/overview">Saturn</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/uranus/overview">Uranus</NavLink>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <NavLink to="/neptune/overview">Neptune</NavLink>
-            </li>
-          </ul>
+            </StyledLink>
+          </StyledDesktopLinks>
         </StyledNavDesktop>
-        <StyledNavMobile className="nav-mobile">
-          <ul className="nav-mobile-links nav-links">
+        <StyledNavMobile ref={navMobile}>
+          <StyledMobileLinks>
             <li>Mercury</li>
             <li>Venus</li>
             <li>Earth</li>
@@ -54,7 +55,7 @@ function Nav() {
             <li>Saturn</li>
             <li>Uranus</li>
             <li>Neptune</li>
-          </ul>
+          </StyledMobileLinks>
           <div className="close" onClick={handleToogleNav}>
             <i className="fa-solid fa-xmark close"></i>
           </div>

@@ -4,7 +4,7 @@
 ☐ poprawić mobile menu zgodnie z figma @high 
 ☐ poprawić, żeby nie skakało przy zmianie widoków, css @low 
 ☐ dodać PageNotFound czy coś takiego @low 
-☐ zmienić wszystkie style na osobne komponenty styled @low
+✔ zmienić wszystkie style na osobne komponenty styled @low @done (6.04.2023, 18:56:30)
 ✔ rozwalił się surface position secondary img @high @done (22.03.2023, 20:20:12)
 ✔ buttony w innych podstronach się nie swiecą na dobry kolor po refactoringu styli @high @done (22.03.2023, 20:20:16)
 ✔ zmienić nazwy dla path routerze na /mercury/overview itp. @low @done (29.03.2023, 21:51:56)

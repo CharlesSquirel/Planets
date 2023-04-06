@@ -8,28 +8,37 @@ export const StyledNav = styled.header`
   height: 85px;
   padding: 22px 40px 27px 32px;
   border-bottom: 1px solid var(--darkGray);
+`;
 
-  .title {
-    font-family: "Antonio", sans-serif;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -1.05px;
-    @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
-      font-size: var(--xl);
-    }
-  }
-  .nav-links {
-    display: flex;
-    text-transform: uppercase;
+export const StyledMobileLinks = styled.ul`
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  text-transform: uppercase;
+`;
 
-    & li {
-      line-height: 25px;
-      letter-spacing: 1px;
-      color: var(--lightGray);
-      font-weight: var(--bold);
-      font-size: var(--m);
-      position: relative;
-    }
+export const StyledLink = styled.li`
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: var(--lightGray);
+  font-weight: var(--bold);
+  font-size: var(--m);
+  position: relative;
+`;
+
+export const Title = styled.h1`
+  font-family: "Antonio", sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1.05px;
+  @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
+    font-size: var(--xl);
   }
 `;
 
@@ -48,12 +57,15 @@ export const StyledNavDesktop = styled.nav`
       background-color: red;
     }
   }
-  .nav-desktop-links {
-    gap: 33px;
-    & li {
-      @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
-        font-size: 18px;
-      }
+`;
+
+export const StyledDesktopLinks = styled.ul`
+  display: flex;
+  text-transform: uppercase;
+  gap: 33px;
+  & li {
+    @media (min-width: ${({ theme }) => theme.break.minDesktop}) {
+      font-size: 18px;
     }
   }
 `;
@@ -64,16 +76,6 @@ export const StyledNavMobile = styled.nav`
   left: -3000px;
   top: 0;
   width: 100%;
-  .nav-mobile-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: var(--white);
-    color: var(--black);
-  }
   .close {
     position: absolute;
     right: 15px;
