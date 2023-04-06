@@ -27,11 +27,11 @@ const Structure = ({ planet, size, img, planetColor }) => {
         <StyledPlanetArticle>
           <StyledWrapperPlanet>
             <StyledPlanetTitle>{planet.name}</StyledPlanetTitle>
-            <StyledPlanetDescription>{planet.overview.content}</StyledPlanetDescription>
+            <StyledPlanetDescription>{planet.structure.content}</StyledPlanetDescription>
             <StyledWrapperWiki>
               Source:
               <StyledWikiText>
-                <a href={planet.overview.source}>Wikipedia</a>
+                <a href={planet.structure.source}>Wikipedia</a>
               </StyledWikiText>
               <span>
                 <StyledSourceIcon src={source} alt="" />

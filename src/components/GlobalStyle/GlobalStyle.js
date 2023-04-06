@@ -8,17 +8,17 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --white: #fff;
     --black: #000;
+    --mercury: #419EBB;
+    --venus: #EDA249;
+    --earth: #6f2ed6;
+    --mars: #D14C32;
+    --jupiter: #D83A34;
+    --saturn: #CD5120;
+    --uranus: #1ec2a4;
+    --neptune: #2d68f0;
     --bg: #070724;
     --darkGray: #38384F;
     --lightGray: #838391;
-    --turquse: #1ec2a4;
-    --yellow: #EDA249;
-    --violet: #6f2ed6;
-    --lightRed: #D14C32;
-    --darkRed: #D83A34;
-    --orange: #CD5120;
-    --darkBlue: #2d68f0;
-    --lightBlue: #419EBB;
     --btn-hover: #1c1c31; 
     --xxl: 80px;
     --xl: 40px;

@@ -9,6 +9,11 @@
 ✔ buttony w innych podstronach się nie swiecą na dobry kolor po refactoringu styli @high @done (22.03.2023, 20:20:16)
 ✔ zmienić nazwy dla path routerze na /mercury/overview itp. @low @done (29.03.2023, 21:51:56)
 ✔ dodac nav do buttonów @low @done (29.03.2023, 23:02:59)
-☐ zmienic teksty przy renderowaniu nowych podstron/ children? @high 
-☐ navlink wskaznik na podstronach @high
+✔ zmienic teksty przy renderowaniu nowych podstron/ children? @high @done (6.04.2023, 22:55:24)
+✔ navlink wskaznik na podstronach @high @done (6.04.2023, 22:11:16)
 ✔ mercury overview podstrona nie dziala @low @done (29.03.2023, 23:09:14)
+✔ zmienić nazwy kolorów na planety @done (6.04.2023, 22:07:07)
+☐ navlink aktywny na podstronach surface itp. @low
+✔ reafaktoryzacja nazw w Root @done (6.04.2023, 22:54:34)
+✔ destrukturyzacja w root @done (6.04.2023, 22:54:53)
+☐ useContext @high

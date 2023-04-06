@@ -16,14 +16,14 @@ export const StyledButton = styled.button`
   font-weight: var(--bold);
   font-size: var(--m);
   background-color: ${(props) =>
-    (props.isActive && props.planetColor === "mercury" && `var(--lightBlue)`) ||
-    (props.isActive && props.planetColor === "venus" && "var(--yellow)") ||
-    (props.isActive && props.planetColor === "earth" && "var(--violet)") ||
-    (props.isActive && props.planetColor === "mars" && "var(--lightRed)") ||
-    (props.isActive && props.planetColor === "jupiter" && "var(--darkRed)") ||
-    (props.isActive && props.planetColor === "saturn" && "var(--orange)") ||
-    (props.isActive && props.planetColor === "uranus" && "var(--turquse)") ||
-    (props.isActive && props.planetColor === "neptune" && "var(--darkBlue)") ||
+    (props.isActive && props.planetColor === "mercury" && "var(--mercury)") ||
+    (props.isActive && props.planetColor === "venus" && "var(--venus)") ||
+    (props.isActive && props.planetColor === "earth" && "var(--earth)") ||
+    (props.isActive && props.planetColor === "mars" && "var(--mars)") ||
+    (props.isActive && props.planetColor === "jupiter" && "var(--jupiter)") ||
+    (props.isActive && props.planetColor === "saturn" && "var(--saturn)") ||
+    (props.isActive && props.planetColor === "uranus" && "var(--uranus)") ||
+    (props.isActive && props.planetColor === "neptune" && "var(--neptune)") ||
     "transparent"};
   pointer-events: ${({ isActive }) => (isActive && "none") || "auto"};
   &:hover {

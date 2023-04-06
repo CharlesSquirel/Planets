@@ -19,28 +19,28 @@ function Nav() {
         <Title>THE PLANETS</Title>
         <StyledNavDesktop>
           <StyledDesktopLinks>
-            <StyledLink>
+            <StyledLink planetNav={"mercury"}>
               <NavLink to="/">Mercury</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"venus"}>
               <NavLink to="/venus/overview">Venus</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"earth"}>
               <NavLink to="/earth/overview">Earth</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"mars"}>
               <NavLink to="/mars/overview">Mars</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"jupiter"}>
               <NavLink to="/jupiter/overview">Jupiter</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"saturn"}>
               <NavLink to="/saturn/overview">Saturn</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"uranus"}>
               <NavLink to="/uranus/overview">Uranus</NavLink>
             </StyledLink>
-            <StyledLink>
+            <StyledLink planetNav={"neptune"}>
               <NavLink to="/neptune/overview">Neptune</NavLink>
             </StyledLink>
           </StyledDesktopLinks>

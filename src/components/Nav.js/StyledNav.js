@@ -30,6 +30,34 @@ export const StyledLink = styled.li`
   font-weight: var(--bold);
   font-size: var(--m);
   position: relative;
+  .active {
+    color: var(--white);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -29px;
+      width: ${({ planetNav }) =>
+        (planetNav === "mercury" && "84px") ||
+        (planetNav === "venus" && "61px") ||
+        (planetNav === "mars" && "51px") ||
+        (planetNav === "earth" && "57px") ||
+        (planetNav === "jupiter" && "70px") ||
+        (planetNav === "saturn" && "71px") ||
+        (planetNav === "uranus" && "74px") ||
+        (planetNav === "neptune" && "83px")};
+      height: 6px;
+      background-color: ${({ planetNav }) =>
+        (planetNav === "mercury" && "var(--mercury)") ||
+        (planetNav === "venus" && "var(--venus)") ||
+        (planetNav === "mars" && "var(--mars)") ||
+        (planetNav === "earth" && "var(--earth)") ||
+        (planetNav === "jupiter" && "var(--jupiter)") ||
+        (planetNav === "saturn" && "var(--saturn)") ||
+        (planetNav === "uranus" && "var(--uranus)") ||
+        (planetNav === "neptune" && "var(--neptune)")};
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -46,16 +74,6 @@ export const StyledNavDesktop = styled.nav`
   padding-top: 6px;
   @media (max-width: ${({ theme }) => theme.break.maxMobile}) {
     display: none;
-  }
-  .active {
-    color: var(--white);
-    &::after {
-      content: "";
-      position: absolute;
-      width: 68px;
-      height: 4px;
-      background-color: red;
-    }
   }
 `;
 

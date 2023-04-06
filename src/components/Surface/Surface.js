@@ -31,11 +31,11 @@ const Surface = ({ planet, img, size, imgSecondary, position, planetColor }) => 
         <StyledPlanetArticle>
           <StyledWrapperPlanet>
             <StyledPlanetTitle>{planet.name}</StyledPlanetTitle>
-            <StyledPlanetDescription>{planet.overview.content}</StyledPlanetDescription>
+            <StyledPlanetDescription>{planet.geology.content}</StyledPlanetDescription>
             <StyledWrapperWiki>
               Source:
               <StyledWikiText>
-                <a href={planet.overview.source}>Wikipedia</a>
+                <a href={planet.geology.source}>Wikipedia</a>
               </StyledWikiText>
               <span>
                 <StyledSourceIcon src={source} alt="" />
