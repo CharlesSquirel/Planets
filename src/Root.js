@@ -1,4 +1,7 @@
-import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Structure from "./components/Structure/Structure";
+import Surface from "./components/Surface/Surface";
 import Nav from "./components/Nav.js/Nav";
 import Overview from "./components/Overview.js/Overview";
 import planets from "./data.json";
@@ -26,11 +29,9 @@ import jupiterSrfImg from "./assets/geology-jupiter.png";
 import saturnSrfImg from "./assets/geology-saturn.png";
 import uranusSrfImg from "./assets/geology-uranus.png";
 import neptuneSrfImg from "./assets/geology-neptune.png";
-import { ThemeProvider } from "styled-components";
 import { theme } from "./components/GlobalStyle/theme";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Structure from "./components/Structure/Structure";
-import Surface from "./components/Surface/Surface";
+import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function Root() {
   // const getPlanet = (planetName) => {
@@ -99,6 +100,7 @@ function Root() {
               <Route path="/saturn/surface" element={<Surface planet={saturn} img={saturnImg} size={saturnSize} imgSecondary={saturnSrfImg} position={"Saturn"} planetColor={"saturn"} />} />
               <Route path="/uranus/surface" element={<Surface planet={uranus} img={uranusImg} size={uranusSize} imgSecondary={uranusSrfImg} position={"Uranus"} planetColor={"uranus"} />} />
               <Route path="/neptune/surface" element={<Surface planet={neptune} img={neptuneImg} size={neptuneSize} imgSecondary={neptuneSrfImg} position={"Neptune"} planetColor={"neptune"} />} />
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Data, StyledDataBox, StyledDataBoxes, Title } from "./StyledDataBoxes";
 
 const DataBoxes = ({ planet }) => {

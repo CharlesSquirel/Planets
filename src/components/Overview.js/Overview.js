@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import DataBoxes from "./DataBoxes";
 import {
   StyledWrapperFlex,
   StyledButtonWrapper,
@@ -14,7 +15,6 @@ import {
   StyledPlanetDescription,
 } from "./StyledOverview";
 import source from "../../assets/icon-source.svg";
-import DataBoxes from "./DataBoxes";
 
 const Overview = ({ planet, img, size, planetColor }) => {
   const planetToNavigate = planet.name.toLowerCase();

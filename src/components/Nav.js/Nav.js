@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
-import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile, Title, StyledLink, StyledMobileLinks, StyledDesktopLinks } from "./StyledNav";
 import { useRef } from "react";
+import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile, Title, StyledLink, StyledMobileLinks, StyledDesktopLinks } from "./StyledNav";
 
 function Nav() {
   const navMobile = useRef();

@@ -3,7 +3,7 @@
 ☐ dodanie transition tam gdzie trzeba @low 
 ☐ poprawić mobile menu zgodnie z figma @high 
 ☐ poprawić, żeby nie skakało przy zmianie widoków, css @low 
-☐ dodać PageNotFound czy coś takiego @low 
+✔ dodać PageNotFound czy coś takiego @low @done (6.05.2023, 15:59:12)
 ✔ zmienić wszystkie style na osobne komponenty styled @low @done (6.04.2023, 18:56:30)
 ✔ rozwalił się surface position secondary img @high @done (22.03.2023, 20:20:12)
 ✔ buttony w innych podstronach się nie swiecą na dobry kolor po refactoringu styli @high @done (22.03.2023, 20:20:16)
@@ -16,4 +16,4 @@
 ☐ navlink aktywny na podstronach surface itp. @low
 ✔ reafaktoryzacja nazw w Root @done (6.04.2023, 22:54:34)
 ✔ destrukturyzacja w root @done (6.04.2023, 22:54:53)
-☐ useContext @high
+☐ order of css properties, all in styled components separate components, order of imports
