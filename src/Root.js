@@ -1,5 +1,8 @@
-import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./components/GlobalStyle/theme";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Structure from "./components/Structure/Structure";
 import Surface from "./components/Surface/Surface";
 import Nav from "./components/Nav.js/Nav";
@@ -29,9 +32,6 @@ import jupiterSrfImg from "./assets/geology-jupiter.png";
 import saturnSrfImg from "./assets/geology-saturn.png";
 import uranusSrfImg from "./assets/geology-uranus.png";
 import neptuneSrfImg from "./assets/geology-neptune.png";
-import { theme } from "./components/GlobalStyle/theme";
-import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function Root() {
   // const getPlanet = (planetName) => {

@@ -34,7 +34,7 @@ const Overview = ({ planet, img, size, planetColor }) => {
                 <a href={planet.overview.source}>Wikipedia</a>
               </StyledWikiText>
               <span>
-                <StyledSourceIcon className="source-icon" src={source} alt="" />
+                <StyledSourceIcon src={source} alt="" />
               </span>
             </StyledWrapperWiki>
           </StyledWrapperPlanet>

@@ -29,7 +29,8 @@ export const StyledButton = styled.button`
   &:hover {
     background-color: var(--btn-hover);
   }
-  .btn-number {
-    opacity: 0.5;
-  }
+`;
+
+export const ButtonNumber = styled.p`
+  opacity: 0.5;
 `;

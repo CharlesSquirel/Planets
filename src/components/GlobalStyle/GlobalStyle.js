@@ -28,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     --regular: 400;
    --medium: 500;
     --bold: 700;
-
 }
 
 * {

@@ -94,14 +94,15 @@ export const StyledNavMobile = styled.nav`
   left: -3000px;
   top: 0;
   width: 100%;
-  .close {
-    position: absolute;
-    right: 15px;
-    top: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--black);
-  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  right: 15px;
+  top: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--black);
 `;
 
 export const StyledHamburgerIcon = styled.div`

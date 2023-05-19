@@ -1,17 +1,12 @@
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
 import { useRef } from "react";
-import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile, Title, StyledLink, StyledMobileLinks, StyledDesktopLinks } from "./StyledNav";
+import { StyledHamburgerIcon, StyledNav, StyledNavDesktop, StyledNavMobile, Title, StyledLink, StyledMobileLinks, StyledDesktopLinks, CloseButton } from "./StyledNav";
 
 function Nav() {
   const navMobile = useRef();
   const handleToogleNav = (e) => {
-    if (e.target.classList.value.includes("close")) {
-      navMobile.current.style.left = "-3000px";
-    }
-    if (e.target.classList.value.includes("open")) {
-      navMobile.current.style.left = "0";
-    }
+    navMobile.current.style.left = e.target.classList.value.includes("close") ? "-3000px" : "0";
   };
   return (
     <>
@@ -56,11 +51,11 @@ function Nav() {
             <li>Uranus</li>
             <li>Neptune</li>
           </StyledMobileLinks>
-          <div className="close" onClick={handleToogleNav}>
+          <CloseButton onClick={handleToogleNav}>
             <i className="fa-solid fa-xmark close"></i>
-          </div>
+          </CloseButton>
         </StyledNavMobile>
-        <StyledHamburgerIcon className="hamburger" onClick={handleToogleNav}>
+        <StyledHamburgerIcon onClick={handleToogleNav}>
           <i className="fa-solid fa-bars open"></i>
         </StyledHamburgerIcon>
       </StyledNav>
