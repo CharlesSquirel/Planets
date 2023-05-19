@@ -9,16 +9,16 @@ export const StyledDataBoxes = styled.section`
 export const StyledDataBox = styled.div`
   width: 255px;
   height: 128px;
-  border: 1px solid var(--lightGray);
   padding: 20px 60px 27px 23px;
+  border: 1px solid var(--lightGray);
 `;
 
 export const Title = styled.p`
   font-weight: var(--bold);
   font-size: 15px;
   line-height: 25px;
-  opacity: 0.5;
   letter-spacing: 1px;
+  opacity: 0.5;
 `;
 
 export const Data = styled.h3`

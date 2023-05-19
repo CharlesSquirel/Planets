@@ -11,6 +11,7 @@ export const StyledNav = styled.header`
 `;
 
 export const StyledMobileLinks = styled.ul`
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
@@ -19,7 +20,6 @@ export const StyledMobileLinks = styled.ul`
   border-bottom-right-radius: 10px;
   background-color: var(--white);
   color: var(--black);
-  display: flex;
   text-transform: uppercase;
 `;
 
@@ -89,11 +89,11 @@ export const StyledDesktopLinks = styled.ul`
 `;
 
 export const StyledNavMobile = styled.nav`
-  transition: all 0.5s ease-out;
   position: absolute;
   left: -3000px;
   top: 0;
   width: 100%;
+  transition: all 0.5s ease-out;
 `;
 
 export const CloseButton = styled.div`

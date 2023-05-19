@@ -57,9 +57,9 @@ export const StyledPlanetArticle = styled.article`
 `;
 
 export const StyledPlanetDescription = styled.p`
+  padding-right: 80px;
   line-height: 25px;
   font-size: var(--lg);
-  padding-right: 80px;
   @media (max-width: ${({ theme }) => theme.break.maxTablet}) {
     padding: 0;
   }
@@ -122,5 +122,5 @@ export const StyledWrapperFlex = styled.div`
     justify-content: center;
     gap: 300px;
     padding: 85px 0 87px 0;
-  } ;
+  }
 `;
